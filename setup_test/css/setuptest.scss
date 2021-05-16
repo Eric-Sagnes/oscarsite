@@ -1,0 +1,407 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  overflow-y: hidden;
+}
+.slider {
+  font-family: sans-serif;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
+}
+section {
+  min-width: 100vw;
+  height: 100vh;
+  scroll-snap-align: start;
+  position: relative;
+  overflow-y: hidden;
+}
+h1  {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: black;
+  width: 100%;
+  left: 0;
+  font-size: calc(1rem + 3vw);
+  text-align: center;
+}
+
+.leftbar{
+  position: fixed;
+  width: 80px;
+  height: 100%;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.77);
+  z-index: 3;
+}
+
+.tilted-div{
+  position: absolute;
+  transform: rotate(90deg);
+  width: 500px;
+  top: 398px;
+  left: -208px;
+}
+
+.tilted-text{
+  font-family: 'GFS Didot', serif;
+  color: rgba(241, 241, 241, 0.8);
+  font-size: 32px;
+}
+
+.button {
+	width: 45px;
+	height: 45px;
+	border-radius: 100%;
+	background: #C4C4C4;
+	position: absolute;
+	top: 60px;
+	left: 19px;
+}
+
+.menu {
+	width: 100vw;
+	height: 100vh;
+	background: #1D1C1C;
+	position: absolute;
+	top: 0px;
+	display: none;
+  left: 80px;
+}
+
+.red {
+	background: red;
+}
+
+.row-1{
+  position: absolute;
+  top: 3%;
+  width: 100%;
+  height: 25%;
+  margin-left: 4%;
+}
+
+.row-2{
+  position: absolute;
+  top: 35%;
+  width: 100%;
+  height: 25%;
+  margin-left: 4%;
+}
+
+.row-3{
+  position: absolute;
+  top: 67%;
+  width: 100%;
+  height: 25%;
+  margin-left: 4%;
+}
+
+.parasite-thumbnail{
+  // position: absolute;
+  width: 12%;
+  height: auto;
+  margin-right: 5%;
+}
+
+.greenbook-thumbnail{
+  // position: absolute;
+  width: 12%;
+  height: auto;
+  margin-right: 5%;
+}
+
+.water-thumbnail{
+  // position: absolute;
+  width: 12%;
+  height: auto;
+  margin-right: 5%;
+}
+
+.moonlight-thumbnail{
+  // position: absolute;
+  width: 12%;
+  height: auto;
+  margin-right: 5%;
+}
+
+.spotlight-thumbnail{
+  // position: absolute;
+  width: 12%;
+  height: auto;
+  margin-right: 5%;
+}
+
+.thumbnail{
+  width: 12%;
+  height: auto;
+  margin-right: 6.1%;
+}
+
+.thumbnail:hover{
+  filter: brightness(.3);
+}
+
+.thumbnail-text{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 15px;
+  color: white;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  // display: none;
+
+
+}
+
+.image{
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+}
+
+.blacktangle{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  background: linear-gradient(1.3deg, #161616 23.67%, rgba(0, 0, 0, 0) 50.32%);;
+}
+
+.textgroup{
+  position: absolute;
+  height: 280px;
+  width: 58%;
+  margin-left: 108px;
+  bottom:0;
+}
+
+.title{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 115px;
+  color: white;
+  bottom: 150px;
+  margin-bottom: -2px;
+  margin-top: 4px;
+}
+
+.title-special{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 92px;
+  color: white;
+  bottom: 150px;
+  margin-bottom: -2px;
+  margin-top: 25px;
+}
+
+.year{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 65px;
+  color: white;
+  margin-left: 22px;
+}
+
+.description{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 28px;
+  color: white;
+  line-height: 44px;
+}
+
+
+
+.slick-dots { /* adjusts the position of the slideshow dots */
+	position: absolute;
+	left: 0px;
+	bottom: 70px;
+}
+
+
+.slideshow-image {
+  position: absolute;
+	width: 100vw;
+	height: 100vh;
+}
+
+.slide-image{
+  width: 100vw;
+	height: 100vh;
+}
+
+.one-image{
+  width: 100vw;
+	height: 100vh;
+  position: relative;
+}
+
+.two-image{
+  width: 100vw;
+	height: 100vh;
+  position: relative;
+}
+
+.three-image{
+  width: 100vw;
+	height: 100vh;
+  position: relative;
+}
+
+.slideshow { /* dimensions for the entire slideshow */
+	position: absolute;
+	width: 430px;
+	height: 150px;
+	right: 60px;
+  bottom: -14px;
+}
+
+
+.slide { /* dimensions for each slide */
+	width: 430px;
+	height: 150px;
+}
+
+
+.one { /* specifications for slide one */
+	width: 100%;
+	height: 100%;
+	position: relative;
+	// left: 50%;
+	// transform: translate(-50%,0px);
+	// background: blue; /* You may remove this line once you the hang of the boundaries of each slide */
+}
+
+
+.two { /* specifications for slide two */
+	width: 100%;
+	height: 100%;
+	position: relative;
+	// left: 50%;
+	// transform: translate(-50%,0px);
+	// background: red; /* You may remove this line once you the hang of the boundaries of each slide */
+}
+
+.three { /* specifications for slide two */
+	width: 100%;
+	height: 100%;
+	position: relative;
+	// left: 50%;
+	// transform: translate(-50%,0px);
+	// background: yellow; /* You may remove this line once you the hang of the boundaries of each slide */
+}
+
+
+.ratings-icons{
+  position: absolute;
+  height: 108px;
+  width: 380px;
+  left: 25px;
+  top: 0px;
+}
+
+.ratings-text-box{
+  height: 100px;
+  width: 90px;
+  // background: blue;
+  position: absolute;
+  top: 26px;
+  left: 113px;
+}
+
+.ratings-text-box2{
+  height: 100px;
+  width: 90px;
+  // background: blue;
+  position: absolute;
+  top: 26px;
+  left: 310px;
+}
+
+.ratings-text{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 55px;
+  color: #C4C4C4;
+}
+
+.ranking-text{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 32px;
+  color: #A8A8A8;
+}
+
+.oscar-icon{
+  height: 120px;
+  width: 120px;
+  position: absolute;
+  top: 18px;
+  left: 15px;
+}
+
+.oscar-textbox{
+  position: absolute;
+  height: 115px;
+  width: 300px;
+  // background: red;
+  top: 21px;
+  left: 130px;
+}
+
+.oscar-text{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
+  color: #E3E3E3;
+  margin-bottom: 6px;
+
+}
+
+.budget-icon{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  top: 10px;
+  left: 18px;
+}
+
+.boxoffice-icon{
+  position: absolute;
+  height: 90px;
+  width: 90px;
+  top: 10px;
+  left: 197px;
+}
+
+.budget-textbox{
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: 33px;
+  left: 98px;
+  // background: blue;
+}
+
+.boxoffice-textbox{
+  position: absolute;
+  height: 100px;
+  width: 128px;
+  top: 33px;
+  left: 297px;
+  // background: blue;
+}
+
+.money-text{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 54px;
+  color: #C4C4C4;
+}
+
+.mil-text{
+  font-family: 'Bebas Neue', cursive;
+  font-size: 38px;
+  color: #C4C4C4;
+  margin-left: 3px;
+}
